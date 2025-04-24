@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3b2d0c14d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>First Task</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="exit-container">
+        <button>
+          <p>קתנתהל</p>
+          <img src="./assets/logout.svg" class="logout-image" />
+        </button>
+      </div>
+
+      <div class="id-container">
+        <h6>ID: 380645708</h6>
+        <button class="text-image-wrapper">
+          <p>רוזח</p>
+          <img src="./assets/chevron.svg" class="chevron-image" />
+        </button>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="tabs-inputs-wrapper">
+        <div class="tabs">
+          <button
+            class="tab disabled"
+            onclick="openButton(event, 'Video Call')"
+          >
+            Video Call
+          </button>
+          <button class="tab" onclick="openButton(event, 'Authorized Persons')">
+            Authorized Persons
+          </button>
+          <button
+            class="tab active"
+            onclick="openButton(event, 'User Information')"
+          >
+            User Information
+          </button>
+        </div>
+
+        <div class="inputs-wrapper">
+          <div class="floating-input">
+            <input
+              type="text"
+              id="surname"
+              placeholder=" "
+              maxlength="45"
+              required
+            />
+            <div class="placeholder-text">Surname</div>
+          </div>
+
+          <div class="floating-input">
+            <input
+              type="text"
+              id="name"
+              placeholder=" "
+              maxlength="45"
+              required
+            />
+            <div class="placeholder-text">Name</div>
+          </div>
+
+          <div class="floating-input">
+            <input type="text" id="address" placeholder=" " required />
+            <div class="placeholder-text">Email address</div>
+          </div>
+
+          <div class="floating-input">
+            <input type="text" id="phone" placeholder=" " required />
+            <div class="placeholder-text">Phone number</div>
+          </div>
+
+          <div class="floating-input">
+            <input
+              type="text"
+              id="id_number"
+              placeholder=" "
+              maxlength="9"
+              required
+            />
+            <div class="placeholder-text">ID number</div>
+          </div>
+
+          <div class="floating-input">
+            <input
+              type="text"
+              id="licence_number"
+              placeholder=" "
+              maxlength="9"
+              required
+            />
+            <div class="placeholder-text">Licence number</div>
+          </div>
+        </div>
+      </div>
+      <div class="bio-wrapper">
+        <div class="avatar-button-wrapper">
+          <img src="./assets/avatar.svg" class="avatar-img" />
+
+          <img src="./assets/edit.svg" class="edit-button-img" />
+        </div>
+        <div class="full_name">
+          <h5>Albert Flores</h5>
+        </div>
+        <div class="info">
+          <div class="registration-date">
+            <p>20.05.2021</p>
+            <div class="p-button">
+              <p>Registration date:</p>
+              <button class="img-button">
+                <img src="./assets/registration-date.svg" />
+              </button>
+            </div>
+          </div>
+
+          <div class="amount_of_orders">
+            <p>5</p>
+            <div class="p-button">
+              <p>Amount of orders:</p>
+              <button class="img-button">
+                <img src="./assets/amount-of-orders.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="button-block-user">
+          <button class="block-user">Block User</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <div class="card-header">
+        <button id="filters">
+          <img src="./assets/flters_button.svg" />
+        </button>
+        <p>Order history</p>
+      </div>
+      <div class="order-history-container">
+        <table>
+          <tbody>
+            <tr class="order-card-1">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 24.48</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>21.03.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>1 X Better PK Flower (T20/C4);</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Pick up from store</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid upon receive</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-pending-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-2">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 54.50</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>13.02.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Delivery</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid by Card</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-complete-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-1">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 24.48</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>21.03.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>1 X Better PK Flower (T20/C4);</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Pick up from store</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid upon receive</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-pending-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-2">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 54.50</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>13.02.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Delivery</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid by Card</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-complete-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-1">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 24.48</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>21.03.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>1 X Better PK Flower (T20/C4);</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Pick up from store</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid upon receive</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-pending-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-2">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 54.50</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>13.02.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Delivery</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid by Card</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-complete-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-card-1">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 24.48</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>21.03.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>1 X Better PK Flower (T20/C4);</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Pick up from store</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid upon receive</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-pending-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="order-card-2">
+              <td class="td-view-link">
+                <a href="#" class="view-link"
+                  ><img src="./assets/view-link.svg"
+                /></a>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Cost</p>
+                  <p>₪ 54.50</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Date & time</p>
+                  <p>13.02.2021 16:12</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Items</p>
+                  <p>2 X Canndoc Ultra Sour Oil (T20/C4)</p>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <p class="p-td">Delivery or pickup</p>
+                  <p>Delivery</p>
+                </div>
+              </td>
+              <td id="td-data">
+                <p class="p-td">Payment method</p>
+                <p>Paid by Card</p>
+              </td>
+              <td class="span-table">
+                <div>
+                  <p id="td-span-label">Pending</p>
+                  <div class="status-complete-dot">
+                    <div class="inner-circle"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
