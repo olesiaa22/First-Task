@@ -8,6 +8,8 @@
       src="https://kit.fontawesome.com/3b2d0c14d3.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/index.js"></script>
+
     <title>First Task</title>
   </head>
   <body>
@@ -31,21 +33,9 @@
     <main class="main-container">
       <div class="tabs-inputs-wrapper">
         <div class="tabs">
-          <button
-            class="tab disabled"
-            onclick="openButton(event, 'Video Call')"
-          >
-            Video Call
-          </button>
-          <button class="tab" onclick="openButton(event, 'Authorized Persons')">
-            Authorized Persons
-          </button>
-          <button
-            class="tab active"
-            onclick="openButton(event, 'User Information')"
-          >
-            User Information
-          </button>
+          <button disabled class="tab disabled">Video Call</button>
+          <button class="tab" id="authorized-tab">Authorized Persons</button>
+          <button class="tab active">User Information</button>
         </div>
 
         <div class="inputs-wrapper">
@@ -72,7 +62,7 @@
           </div>
 
           <div class="floating-input">
-            <input type="text" id="address" placeholder=" " required />
+            <input type="text" id="email-address" placeholder=" " required />
             <div class="placeholder-text">Email address</div>
           </div>
 
@@ -508,6 +498,6 @@
         </table>
       </div>
     </footer>
-    <script src="index.js"></script>
   </body>
+  <script type="module" src="personUrlValidation.js"></script>
 </html>

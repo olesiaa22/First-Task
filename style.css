@@ -803,3 +803,6 @@ td p {
 }
 
 
+.hidden{
+  display: none;
+}
